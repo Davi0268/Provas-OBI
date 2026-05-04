@@ -11,7 +11,8 @@ int main(){
     for(int i = 0; i < t; i++){
         cin >> nums[i];
     }
-    for(int j = t; j > 0; j--){
+    // aida possui erro possivelmente nesse for daqui de baixo
+    for(int j = t; j >= 0; j--){
         if(nums[j] == 0){
             nums[j - 1] = 0;
         }
