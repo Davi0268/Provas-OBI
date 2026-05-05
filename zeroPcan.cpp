@@ -2,24 +2,30 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+void addvector(vector<int>& v, int x){
+    
+    for(int j = 0; j < x; j++){
+        int z;
+        cin >> z;
+        v.push_back(z);
+    }
+}
 
 int main(){
-    int T = 0;
-    int t;
-    cin >> t;
-    int nums[t];
-    for(int i = 0; i < t; i++){
-        cin >> nums[i];
-    }
-    // aida possui erro possivelmente nesse for daqui de baixo
-    for(int j = t; j >= 0; j--){
-        if(nums[j] == 0){
-            nums[j - 1] = 0;
+    int tamanho;
+    cin >> tamanho;
+    vector<int> valores ={};
+    addvector(valores, tamanho);
+    for(int j = tamanho; j >= 0; j--){
+        if(valores[j] == 0){
+            
+            
+            valores.erase(valores.begin() + j);
+           // valores.erase(valores.begin() + (j - 1));
         }
     }
-    for(int x =0; x < t; x++){
-        T = nums[x] + T;
+    for(int i = 0; i < tamanho; i++){
+        cout << valores[i] << " ";
     }
-    cout << T;
     return 0;
 }
