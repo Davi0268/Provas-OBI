@@ -18,24 +18,26 @@ int main(){
     vector<int> valores ={};
     addvector(valores, tamanho);
     for(int j = 0; j < tamanho; j++){
-        if(valores[j] == 0 ){
-            if(valores[j - 1] = 0){
-                valores[j - 2] = 0;
+        if(valores[j - 1] == 0){
+                valores[j - 3] = 0;
             }
+        if(valores[j] == 0 ){
             valores[j - 1] = 0;
-            //valores[j - 1] = 0;
         //valores.erase(valores.begin() + j);
         // valores.erase(valores.begin() + (j - 1));
         }
+        
     }/*
     if(z == 0){
             v[j - 1] = 0;
         }    
     */
     for(int i = 0; i < tamanho; i++){
-        cout << valores[i] << " ";
-        //as = valores[i] + as;
+        //cout << valores[i] << " ";
+        as = valores[i] + as;
     }
-    //cout << as;
+    cout << as;
     return 0;
-}
+}/*Tive uma ideia usando vários vetores mas ainda irei desenvolver esse pensamento
+não farei isso hoje  
+*/
