@@ -11,8 +11,6 @@ void acelerador(int km){
             if(j == km){
                 cout << "1";
                 break;
-            }else{
-                break;
             }
         }
         if(cont == 8){
